@@ -1,0 +1,27 @@
+<!-- <p>room 1</p> -->
+<!-- <button name="east" action="/room2" type="button" class="btn btn-success">East</button> -->
+<!-- <p><%= @room1 %></p> -->
+<!-- <div style="<%= @display %>" class="">
+  <p>Room 1</p>
+  <a action="post" href="/room5">South</a>
+  <a action="post" href="/room2">East</a>
+</div>
+
+<div style="display: block" class="">
+  <p><%= @room %></p>
+  <a href="/room3">East</a>
+  <a href="/room1">West</a>
+</div> -->
+
+<p><%= @room %></p>
+<form action="/room" method="post">
+
+  <label for="direction">Select the direction you'd like to move</label>
+  <select class="form-control" name="direction" id="direction">
+    <option style="<%= @display_north %>">North</option>
+    <option style="<%= @display_south %>">South</option>
+    <option style="<%= @display_east %>">East</option>
+    <option style="<%= @display_west %>">West</option>
+  </select>
+  <button type="button" name="button">Go!</button>
+</form>
